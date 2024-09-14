@@ -22,7 +22,7 @@ class POCLineChart extends StatelessWidget {
         gridData: FlGridData(
           show: false,
         ),
-        lineBarsData: resolveDataGroupA(
+        lineBarsData: resolveDataGroup(
           [
             const Color(0xFF53209C),
             const Color(0xFF6A6A6A),
@@ -32,13 +32,13 @@ class POCLineChart extends StatelessWidget {
         betweenBarsData: [
           BetweenBarsData(
             fromIndex: 0,
-            toIndex: 5,
-            color: const Color(0xFFFEA44B),
+            toIndex: 6,
+            color: const Color(0xFFEAD8F9),
           ),
           BetweenBarsData(
             fromIndex: 3,
-            toIndex: 4,
-            color: const Color(0xFF53209C),
+            toIndex: 5,
+            color: const Color(0xFFE1E1E1),
           ),
         ],
       ),
