@@ -1,3 +1,4 @@
+import 'package:chart_poc/widgets/poc_line_chart_bar_data.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
@@ -8,31 +9,26 @@ class POCLineChart extends StatelessWidget {
   Widget build(BuildContext context) {
     return LineChart(
       LineChartData(
-        lineBarsData: [
-          LineChartBarData(
-            isCurved: true,
-            color: const Color(0x99aa4cfc),
-            barWidth: 4,
-            isStrokeCapRound: true,
-            dotData: FlDotData(show: false),
-            belowBarData: BarAreaData(
-              show: true,
-              color: const Color(0x33aa4cfc),
-            ),
-            aboveBarData: BarAreaData(
-              show: true,
-              color: const Color(0x33aa4cfc),
-            ),
-            spots: const [
-              FlSpot(1, 1),
-              FlSpot(3, 2.8),
-              FlSpot(7, 1.2),
-              FlSpot(10, 2.8),
-              FlSpot(12, 2.6),
-              FlSpot(13, 3.9),
-            ],
+        titlesData: FlTitlesData(
+          show: false,
+        ),
+        borderData: FlBorderData(
+          show: true,
+          border: const Border(
+            right: BorderSide(color: Color(0xFFB8B8B8), width: 2),
+            bottom: BorderSide(color: Color(0xFFB8B8B8), width: 2),
           ),
-        ],
+        ),
+        gridData: FlGridData(
+          show: false,
+        ),
+        lineBarsData: resolveDataGroupA(
+          [
+            const Color(0xFF53209C),
+            const Color(0xFF6A6A6A),
+            const Color(0xFFFEA44B),
+          ],
+        ),
       ),
       swapAnimationDuration: const Duration(milliseconds: 150), // Optional
       swapAnimationCurve: Curves.linear, // Optional

@@ -12,17 +12,29 @@ class LineChartPage extends StatelessWidget {
         title: const Text("Line Chart PoC"),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[
-            Text(
-              'Welcome to the POC',
-            ),
-            SizedBox(
-              height: 350,
-              child: POCLineChart(),
-            ),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              const SizedBox(
+                height: 350,
+                child: POCLineChart(),
+              ),
+              const SizedBox(height: 8),
+              Row(
+                children: const [
+                  Text(
+                    'Hoje',
+                  ),
+                  Spacer(),
+                  Text(
+                    '10 anos',
+                  ),
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );
