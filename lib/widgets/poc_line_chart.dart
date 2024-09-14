@@ -29,6 +29,18 @@ class POCLineChart extends StatelessWidget {
             const Color(0xFFFEA44B),
           ],
         ),
+        betweenBarsData: [
+          BetweenBarsData(
+            fromIndex: 0,
+            toIndex: 5,
+            color: const Color(0xFFFEA44B),
+          ),
+          BetweenBarsData(
+            fromIndex: 3,
+            toIndex: 4,
+            color: const Color(0xFF53209C),
+          ),
+        ],
       ),
       swapAnimationDuration: const Duration(milliseconds: 150), // Optional
       swapAnimationCurve: Curves.linear, // Optional
